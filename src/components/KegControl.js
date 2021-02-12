@@ -13,6 +13,14 @@ class KegControl extends React.Component {
     };
   }
 
+  handleAddingKeg = (newKeg) => {
+    const newMasterKegList = this.state.masterKegList.concat(newKeg);
+    this.setState({
+      masterKegList: newMasterKegList,
+      formVisible: false
+    });
+  }
+
   handleClick = () => {
     this.setState(prevState => ({
       formVisible: !prevState.formVisible
@@ -23,7 +31,7 @@ class KegControl extends React.Component {
     let currentState = null;
     let buttonText = null;
     if (this.state.formVisible) {
-      currentState=<NewKegForm />
+      currentState=<NewKegForm onKegAdd={this.handleAddingKeg} />
       buttonText = "Back to Keg List"
     } else {
       currentState = <KegList kegList={this.state.masterKegList} />
