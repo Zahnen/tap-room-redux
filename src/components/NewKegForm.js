@@ -29,7 +29,8 @@ function NewKegForm(props) {
         name='abv'
         placeholder='Alcohol by Volume (abv)' />
         <input
-        type='text'
+        type='number'
+        min='0'
         name='pintsLeft'
         placeholder='Pints Remaining in Keg' />
         <button type='submit'>Add Keg to Keg List</button>
