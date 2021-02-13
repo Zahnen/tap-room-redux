@@ -9,7 +9,6 @@ function App() {
     <>
       <Header />
       <div class="container">
-        <p>Welcome to Hopper!</p>
         <KegControl />
       </div>
     </>

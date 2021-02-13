@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from "prop-types";
-import KegFull from './../img/KegFull.png';
-import KegLow from './../img/KegLow.png';
+import KegFull from './../img/KegFull.svg';
+import KegLow from './../img/KegLow.svg';
 import KegEmpty from './../img/KegEmpty.svg';
 
 
