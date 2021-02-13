@@ -1,70 +1,151 @@
-# Getting Started with Create React App
+# Hopper
+### An React application, February 12, 2021
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#### By [Zahnen Garner](https://www.github.com/zahnen)
 
-## Available Scripts
+---  
 
-In the project directory, you can run:
+_Hopper is a React-based inventory management tool. Hopper allows users to track stock of kegs of beer and adjust their inventory as needed in a single-page application. Hopper was created as an independent project while studying at Epicodus. The application was created to apply concepts I learned this week which include the fundementals of React, modifying shared & local state, use of PropTypes._  
 
-### `npm start`
+---  
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 🔍 Deployment
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+[Click Here to view a live deployment of this project](zahnen.github.io/tap-room)
 
-### `npm test`
+## 📘 User Stories
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<details>
+  <summary>Expand</summary>
+  This project was created to answer to the following user stories:
+  <table>
+  <tr>
+    <th>Scenario 1</th>
+    <th></th>
+  </tr>
+  <tr>
+    <td>Behavior</td>
+    <td>As a user, I want to see a list/menu of all available kegs. For each keg, I want to see its name, brand, price and alcoholContent.</td>
+  </tr>
+  <tr>
+    <td>Completion</td>
+    <td>✅</td>
+  </tr>
+  </table>
+  <table>
+    <tr>
+      <th>Scenario 2</th>
+      <th></th>
+    </tr>
+    <tr>
+      <td>Behavior</td>
+      <td>As a user, I want to submit a form to add a new keg to a list.</td>
+    </tr>
+    <tr>
+      <td>Completion</td>
+      <td>✅</td>
+    </tr>
+  </table>
+  <table>
+    <tr>
+      <th>Scenario 3</th>
+      <th></th>
+    </tr>
+    <tr>
+      <td>Behavior</td>
+      <td>As a user, I want to be able to click on a keg to see its detail page.</td>
+    </tr>
+    <tr>
+      <td>Completion</td>
+      <td>✅</td>
+    </tr>
+  </table>
+  <table>
+    <tr>
+      <th>Scenario 4</th>
+      <th></th>
+    </tr>
+    <tr>
+      <td>Behavior</td>
+      <td>As a user, I want to see how many pints are left in a keg.</td>
+    </tr>
+    <tr>
+      <td>Completion</td>
+      <td>✅</td>
+    </tr>
+  </table>
+  <table>
+    <tr>
+      <th>Scenario 5</th>
+      <th></th>
+    </tr>
+    <tr>
+      <td>Behavior</td>
+      <td>As a user, I want to be able to click a button next to a keg whenever I sell a pint of it. This should decrease the number of pints left by 1. Pints should not be able to go below 0.</td>
+    </tr>
+    <tr>
+      <td>Completion</td>
+      <td>✅</td>
+    </tr>
+  </table>
+</details>
 
-### `npm run build`
+---  
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🔧 Setup/Installation Instructions
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### If you would like to run the webpage locally
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* _Open your git-capable command line program (I recommend Terminal on Mac or Git Bash on PC)_
+* _Ensure you are within the directory you'd like the file to be created in._
+* _Enter the command `git clone https://github.com/Zahnen/tap-room` in your command line_
+* _Once cloned, use the `cd ` command to navigate to the directory created in the previous step._
+* _You must have node.js installed in order to run the webpage successfully. If you do not have node.js installed, find more information and download it [here](https://nodejs.org/en/download/)_
+* _Once in the newly cloned directory, run `npm install` in your command line to install the necessary packages and dependencies._
+* _To open the webpage in your default browser, run "$ npm start"._
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+---  
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 📊 Component Diagram
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+![Component diagram](https://i.imgur.com/daNIbQN.jpg)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+---  
 
-## Learn More
+## ❗ Known Bugs/Issues
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+There are no known bugs or issues at this time. If you come across any, please let me know by [emailing me](mailto:zahnen@gmail.com).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---  
 
-### Code Splitting
+## ❓ Support and Contact Details
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Zahnen Garner // zahnen@gmail.com
 
-### Analyzing the Bundle Size
+---  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 💻 Technologies Used
 
-### Making a Progressive Web App
+_This application required use of the following programs/languages/libraries to create:_
+- _[Microsoft Visual Studio Code](https://code.visualstudio.com/)_
+- _[Git/GitHub](https://github.com/)_
+- _[React](https://reactjs.org/)_
+- _[JavaScript](https://www.w3schools.com/js/js_es6.asp)_
+- _[JSX](https://reactjs.org/docs/introducing-jsx.html)_
+- _[npm](https://www.npmjs.com/)_
+- _[Node.Js](https://nodejs.org/en/)_
+- _[Babel](https://babeljs.io/)_
+- _[ES Lint](https://eslint.org/)_
+- _[Bootstrap](https://getbootstrap.com/)_
+- _[CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS)_
+- _For a full list of packages/dependencies, feel free to have a look in the file titled package.json_
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+---  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 📃  License
 
-### Deployment
+*Licensed under MIT*
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Copyright (c) 2020 Zahnen Garner

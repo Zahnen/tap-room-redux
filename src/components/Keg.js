@@ -10,7 +10,7 @@ function Keg(props){
   return (
     <>
     <div onClick={() => props.whenKegClicked(props.id)}>
-      {props.pintsLeft === 0 ? <img src={KegEmpty}/> : props.pintsLeft > 10 ? <img src={KegFull}/> : <img src={KegLow}/> }
+      {props.pintsLeft === 0 ? <img src={KegEmpty} alt="Empty Keg"/> : props.pintsLeft > 10 ? <img src={KegFull} alt="Full Keg"/> : <img src={KegLow} alt="Low Keg"/> }
       <h1>{props.name}</h1>
       <h1>{props.brand}</h1>
     </div>
