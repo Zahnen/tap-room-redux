@@ -11,7 +11,7 @@ _Hopper is a React-based inventory management tool. Hopper allows users to track
 
 ## 🔍 Deployment
 
-[Click Here to view a live deployment of this project](zahnen.github.io/tap-room)
+[Click Here to view a live deployment of this project](https://zahnen.github.io/tap-room)
 
 ## 📘 User Stories
 
