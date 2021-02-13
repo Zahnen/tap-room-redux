@@ -1,9 +1,12 @@
 import React from "react";
+import logo from './../img/HopperLogo.svg';
 
 function Header() {
   return(
-    <h1>Tap Room</h1>
-  );
+    <>
+    <img src={logo} alt="Hopper Logo"/>
+    </>
+    );
 }
 
 export default Header;

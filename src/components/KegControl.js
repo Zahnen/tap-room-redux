@@ -100,7 +100,7 @@ class KegControl extends React.Component {
     return(
       <>
         {currentState}
-        <button onClick={this.handleClick}>{buttonText}</button>
+        <button onClick={this.handleClick} class='btn btn-warning'>{buttonText}</button>
       </>
     );
   }

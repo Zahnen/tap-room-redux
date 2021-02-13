@@ -10,9 +10,9 @@ function KegDetail(props){
       <h3>ABV: {keg.abv}</h3>
       <h3>Price Per Pint: {keg.price}</h3>
       {keg.pintsLeft === 0 ? <h3>Out of Stock</h3> : keg.pintsLeft < 10 ? <h3>Low Stock! Refill Soon! Pints Remaining: {keg.pintsLeft}</h3> : <h3>Pints Remaining in Keg: {keg.pintsLeft}</h3>}
-      {keg.pintsLeft > 0 ? <button onClick={props.onClickingSell}>Sell a Pint</button> : null}
-      <button onClick={props.onClickingEdit}>Edit Keg</button>
-      <button onClick={() => onClickingDelete(keg.id)}>Delete Keg</button>
+      {keg.pintsLeft > 0 ? <button onClick={props.onClickingSell} class='btn btn-warning'>Sell a Pint</button> : null}
+      <button onClick={props.onClickingEdit} class='btn btn-warning'>Edit Keg</button>
+      <button onClick={() => onClickingDelete(keg.id)} class='btn btn-warning'>Delete Keg</button>
     </>
   );
 }

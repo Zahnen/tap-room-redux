@@ -4,10 +4,12 @@ import KegControl from "./KegControl"
 import 'bootstrap/dist/css/bootstrap.css';
 
 function App() {
+
   return(
     <>
+      <Header />
       <div class="container">
-        <Header />
+        <p>Welcome to Hopper!</p>
         <KegControl />
       </div>
     </>

@@ -1,15 +1,18 @@
 import React from 'react';
 import PropTypes from "prop-types";
+import KegFull from './../img/KegFull.png';
+import KegLow from './../img/KegLow.png';
+import KegEmpty from './../img/KegEmpty.svg';
+
+
 
 function Keg(props){
   return (
     <>
     <div onClick={() => props.whenKegClicked(props.id)}>
+      {props.pintsLeft === 0 ? <img src={KegEmpty}/> : props.pintsLeft > 10 ? <img src={KegFull}/> : <img src={KegLow}/> }
       <h1>{props.name}</h1>
       <h1>{props.brand}</h1>
-      {/* <h1>{props.price}</h1>
-      <h1>{props.abv}</h1>
-      <h1>{props.pintsLeft}</h1> */}
     </div>
     </>
   );
