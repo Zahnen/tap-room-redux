@@ -5,13 +5,13 @@
 
 ---  
 
-_Hopper is a React-based inventory management tool. Hopper allows users to track stock of kegs of beer and adjust their inventory as needed in a single-page application. Hopper was created as an independent project while studying at Epicodus. The application was created to apply concepts I learned this week which include the fundementals of React, modifying shared & local state, use of PropTypes._  
+_Hopper is a React-based inventory management tool. Hopper allows users to track stock of kegs of beer and adjust their inventory as needed in a single-page application. Hopper was created as an independent project while studying at Epicodus. The application was created to apply concepts I learned this week which include the fundementals of React, modifying shared & local state, and using PropTypes._  
 
 ---  
 
 ## 🔍 Deployment
 
-[Click Here to view a live deployment of this project](zahnen.github.io/tap-room)
+[Click Here to view a live deployment of this project](https://zahnen.github.io/tap-room)
 
 ## 📘 User Stories
 

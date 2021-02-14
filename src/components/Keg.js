@@ -9,7 +9,7 @@ import KegEmpty from './../img/KegEmpty.svg';
 function Keg(props){
   return (
     <>
-    <div onClick={() => props.whenKegClicked(props.id)}>
+    <div class="col-4" onClick={() => props.whenKegClicked(props.id)}>
       {props.pintsLeft === 0 ? <img src={KegEmpty} alt="Empty Keg"/> : props.pintsLeft > 10 ? <img src={KegFull} alt="Full Keg"/> : <img src={KegLow} alt="Low Keg"/> }
       <h1>{props.name}</h1>
       <h1>{props.brand}</h1>
