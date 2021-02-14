@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 function KegList(props) {
   return(
     <>
-    <div class ="d-flex flex-row flex-wrap my-flex-container">
+    <div className ="d-flex flex-row flex-wrap my-flex-container">
       {props.kegList.map((keg) =>
         <Keg
           whenKegClicked = {props.onKegSelection}

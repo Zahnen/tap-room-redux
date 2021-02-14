@@ -4,7 +4,6 @@ import KegList from "./KegList";
 import NewKegForm from "./NewKegForm";
 import EditKegForm from "./EditKegForm";
 
-
 class KegControl extends React.Component {
 
   constructor(props) {
@@ -99,8 +98,9 @@ class KegControl extends React.Component {
 
     return(
       <>
+        <button style={{float: 'right', marginBottom: '30px'}} onClick={this.handleClick} className='btn btn-warning'>{buttonText}</button>
+        <br/>
         {currentState}
-        <button onClick={this.handleClick} class='btn btn-warning'>{buttonText}</button>
       </>
     );
   }

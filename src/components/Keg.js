@@ -7,12 +7,16 @@ import KegEmpty from './../img/KegEmpty.svg';
 
 
 function Keg(props){
+  const kegDisplayStyles = {
+    textAlign: 'center',
+  }
   return (
     <>
-    <div class="col-4" onClick={() => props.whenKegClicked(props.id)}>
+    <div style = {kegDisplayStyles} className="col-4" onClick={() => props.whenKegClicked(props.id)}>
       {props.pintsLeft === 0 ? <img src={KegEmpty} alt="Empty Keg"/> : props.pintsLeft > 10 ? <img src={KegFull} alt="Full Keg"/> : <img src={KegLow} alt="Low Keg"/> }
-      <h1>{props.name}</h1>
-      <h1>{props.brand}</h1>
+      <h3>{props.name}</h3>
+      <h4><em>{props.brand}</em></h4>
+      <p>{props.abv}% ABV | {props.pintsLeft} Pints Remaining</p>
     </div>
     </>
   );
