@@ -109,7 +109,7 @@ _Hopper is a React-based inventory management tool. Hopper allows users to track
 
 ## 📊 Component Diagram
 
-![Component diagram](https://i.imgur.com/daNIbQN.jpg)
+![Component diagram](https://i.imgur.com/Gw5PkVq.jpg)
 
 ---  
 
