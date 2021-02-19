@@ -1,4 +1,11 @@
+import masterKegListReducer from '../../reducers/keg-list-reducer';
+import formVisibleReducer from '../../reducers/form-visible-reducer';
+import editingReducer from '../../reducers/editing-reducer';
+import selectedKegReducer from '../../reducers/selected-keg-reducer';
 import rootReducer from '../../reducers/index';
+import { createStore } from 'redux';
+
+let store = createStore(rootReducer);
 
 describe ('rootReducer', () => {
 
@@ -9,5 +16,9 @@ describe ('rootReducer', () => {
       editing: false,
       selectedKeg: null
     });
+  });
+
+  test('Check that initial state of masterKegListReducer matches root reducer', () => {
+    expect(store.getState().masterKegList).toEqual(masterKegListReducer(undefined, { type: null}));
   });
 });
