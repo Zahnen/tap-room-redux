@@ -1,5 +1,5 @@
 # Hopper
-### An React application, February 12, 2021
+### An React application with Redux, February 12, 2021
 
 #### By [Zahnen Garner](https://www.github.com/zahnen)
 
