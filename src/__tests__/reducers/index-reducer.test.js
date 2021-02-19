@@ -6,6 +6,7 @@ import rootReducer from '../../reducers/index';
 import { createStore } from 'redux';
 
 let store = createStore(rootReducer);
+let action;
 
 describe ('rootReducer', () => {
 
@@ -32,5 +33,19 @@ describe ('rootReducer', () => {
 
   test('Check that initial state of selectedKegReducer matches root reducer', () => {
     expect(store.getState().selectedKeg).toEqual(selectedKegReducer(undefined, { type: null}));
+  });
+
+  test('Check that ADD_KEG action functions for both masterKegListReducer and root reducer', () => {
+    action = {
+      type: 'ADD_KEG',
+      name: 'Beer',
+      brand:'Brewer',
+      price: '$4.00',
+      abv: '3.2',
+      id: 1,
+      pintsLeft: 120
+    };
+    store.dispatch(action)
+    expect(store.getState().masterKegList).toEqual(masterKegListReducer(undefined, action));
   });
 });
