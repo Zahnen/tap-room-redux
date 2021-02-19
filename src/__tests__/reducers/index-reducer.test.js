@@ -6,7 +6,6 @@ import rootReducer from '../../reducers/index';
 import { createStore } from 'redux';
 
 let store = createStore(rootReducer);
-let action;
 
 describe ('rootReducer', () => {
 
@@ -48,11 +47,20 @@ describe ('rootReducer', () => {
     store.dispatch(action);
     expect(store.getState().masterKegList).toEqual(masterKegListReducer(undefined, action));
   });
+
   test('Check that TOGGLE_FORM action functions for both formVisibleReducer and root reducer', () => {
     let action = {
       type: 'TOGGLE_FORM'
     }
     store.dispatch(action);
     expect(store.getState().formVisibleOnPage).toEqual(formVisibleReducer(undefined, action));
+  });
+
+  test('Check that TOGGLE_EDIT action functions for both editingReducer and root reducer', () => {
+    let action = {
+      type: 'TOGGLE_EDIT'
+    }
+    store.dispatch(action);
+    expect(store.getState().editing).toEqual(editingReducer(undefined, action));
   });
 });
