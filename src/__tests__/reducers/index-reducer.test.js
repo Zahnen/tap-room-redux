@@ -63,4 +63,22 @@ describe ('rootReducer', () => {
     store.dispatch(action);
     expect(store.getState().editing).toEqual(editingReducer(undefined, action));
   });
+
+  test('Check that SELECT_KEG action functions for both selectedKegReducer and root reducer', () => {
+
+    let selectedTestKeg = {
+      name: 'Mead',
+      brand: 'Brewer2',
+      price: '$3.50',
+      abv: '3.8',
+      id: 2,
+      pintsLeft: 9
+      }
+    let action = {
+      type: 'SELECT_KEG',
+      selectedKeg: selectedTestKeg
+    }
+    store.dispatch(action);
+    expect(store.getState().selectedKeg).toEqual(selectedKegReducer(undefined, action));
+  });
 });
