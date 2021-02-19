@@ -22,6 +22,7 @@ describe('kegListReducer', () => {
       name,
       brand,
       price,
+      abv,
       id,
       pintsLeft
     };
@@ -31,6 +32,7 @@ describe('kegListReducer', () => {
         name,
         brand,
         price,
+        abv,
         id,
         pintsLeft
       }
