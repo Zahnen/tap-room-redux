@@ -36,7 +36,7 @@ describe ('rootReducer', () => {
   });
 
   test('Check that ADD_KEG action functions for both masterKegListReducer and root reducer', () => {
-    action = {
+    let action = {
       type: 'ADD_KEG',
       name: 'Beer',
       brand:'Brewer',
@@ -45,7 +45,14 @@ describe ('rootReducer', () => {
       id: 1,
       pintsLeft: 120
     };
-    store.dispatch(action)
+    store.dispatch(action);
     expect(store.getState().masterKegList).toEqual(masterKegListReducer(undefined, action));
+  });
+  test('Check that TOGGLE_FORM action functions for both formVisibleReducer and root reducer', () => {
+    let action = {
+      type: 'TOGGLE_FORM'
+    }
+    store.dispatch(action);
+    expect(store.getState().formVisibleOnPage).toEqual(formVisibleReducer(undefined, action));
   });
 });
