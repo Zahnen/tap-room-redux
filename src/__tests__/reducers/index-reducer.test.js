@@ -29,4 +29,8 @@ describe ('rootReducer', () => {
   test('Check that initial state of editingReducer matches root reducer', () => {
     expect(store.getState().editing).toEqual(editingReducer(undefined, { type: null}));
   });
+
+  test('Check that initial state of selectedKegReducer matches root reducer', () => {
+    expect(store.getState().selectedKeg).toEqual(selectedKegReducer(undefined, { type: null}));
+  });
 });
