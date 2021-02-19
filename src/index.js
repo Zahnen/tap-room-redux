@@ -4,11 +4,27 @@ import 'bootstrap/dist/css/bootstrap.css';
 import './index.css';
 import App from './components/App';
 import reportWebVitals from './reportWebVitals';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import rootReducer from './reducers/index';
+
+const initialState = {
+  formVisible: false,
+  masterKegList: [],
+  selectedKeg: null,
+  editing: false
+};
+
+const store = createStore(
+  rootReducer,
+  initialState
+);
+
 
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={store}>
     <App />
-  </React.StrictMode>,
+  </Provider>,
   document.getElementById('root')
 );
 
