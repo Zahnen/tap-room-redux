@@ -21,4 +21,5 @@ export const toggleForm = () => ({
 });
 
 export const toggleEdit = () => ({
+  type: 'TOGGLE_EDIT'
 });
