@@ -19,4 +19,10 @@ describe('Hopper actions', () => {
       id: 2,
       pintsLeft: 9})
   });
+  test('deleteKeg should create DELETE_KEG action', () => {
+    expect(actions.deleteKeg(1)).toEqual({
+      type: 'DELETE_KEG',
+      id: 1
+    });
+  });
 });

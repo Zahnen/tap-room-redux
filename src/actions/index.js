@@ -10,3 +10,7 @@ export const addKeg = (keg) => {
     pintsLeft
   }
 }
+
+export const deleteKeg = (id) => ({
+
+});
