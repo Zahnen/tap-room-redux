@@ -121,8 +121,9 @@ class KegControl extends React.Component {
       }
       dispatch(action3);
     } else {
+      console.log("clicked add")
       const action = {
-        type: 'TOGGLE_EDIT',
+        type: 'TOGGLE_FORM',
       }
       dispatch(action);
     }
@@ -162,7 +163,7 @@ class KegControl extends React.Component {
 
 KegControl.propTypes = {
   formVisible: PropTypes.bool,
-  masterKegList: PropTypes.array,
+  masterKegList: PropTypes.object,
   selectedKeg: PropTypes.object,
   editing: PropTypes.bool
 }

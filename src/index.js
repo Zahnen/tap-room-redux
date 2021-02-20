@@ -9,8 +9,8 @@ import { Provider } from 'react-redux';
 import rootReducer from './reducers/index';
 
 const initialState = {
-  formVisible: false,
-  masterKegList: [],
+  formVisibleOnPage: false,
+  masterKegList: {},
   selectedKeg: null,
   editing: false
 };
