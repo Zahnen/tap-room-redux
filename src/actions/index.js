@@ -25,5 +25,6 @@ export const toggleEdit = () => ({
 });
 
 export const selectKeg = (keg) => ({
-
+  type: 'SELECT_KEG',
+  selectedKeg: keg
 });
