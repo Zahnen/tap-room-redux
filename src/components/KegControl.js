@@ -105,16 +105,26 @@ class KegControl extends React.Component {
   }
 
   handleClick = () => {
+    const { dispatch } = this.props;
     if (this.props.selectedKeg != null) {
-      this.setState ({
-        formVisible: false,
-        selectedKeg: null,
-        editing: false
-      });
+      const action = {
+        type: 'TOGGLE_EDIT',
+      }
+      dispatch(action);
+      const action2 = {
+        type: 'SELECT_KEG',
+        selectedKeg: null
+      }
+      dispatch(action2);
+      const action3 = {
+        type: 'TOGGLE_EDIT',
+      }
+      dispatch(action3);
     } else {
-      this.setState(prevState => ({
-      formVisible: !prevState.formVisible
-      }));
+      const action = {
+        type: 'TOGGLE_EDIT',
+      }
+      dispatch(action);
     }
   }
 
