@@ -38,4 +38,12 @@ describe('Hopper actions', () => {
       type: 'TOGGLE_EDIT'
     });
   });
+
+  test('selectKeg should create SELECT_KEG action', () => {
+    const keg = {};
+    expect(actions.selectKeg(keg)).toEqual({
+      type: 'SELECT_KEG',
+      selectedKeg: keg
+    });
+  });
 });
