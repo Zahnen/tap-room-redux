@@ -12,7 +12,7 @@ describe ('rootReducer', () => {
   test('Should return default state if no action is passed into reducer', () => {
     expect(rootReducer({}, { type: null})).toEqual({
       masterKegList: {},
-      formVisibleOnPage: false,
+      formVisible: false,
       editing: false,
       selectedKeg: null
     });
@@ -23,7 +23,7 @@ describe ('rootReducer', () => {
   });
 
   test('Check that initial state of formVisibleReducer matches root reducer', () => {
-    expect(store.getState().formVisibleOnPage).toEqual(formVisibleReducer(undefined, { type: null}));
+    expect(store.getState().formVisible).toEqual(formVisibleReducer(undefined, { type: null}));
   });
 
   test('Check that initial state of editingReducer matches root reducer', () => {
@@ -53,7 +53,7 @@ describe ('rootReducer', () => {
       type: 'TOGGLE_FORM'
     }
     store.dispatch(action);
-    expect(store.getState().formVisibleOnPage).toEqual(formVisibleReducer(undefined, action));
+    expect(store.getState().formVisible).toEqual(formVisibleReducer(undefined, action));
   });
 
   test('Check that TOGGLE_EDIT action functions for both editingReducer and root reducer', () => {
