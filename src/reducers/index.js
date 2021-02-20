@@ -6,7 +6,7 @@ import {combineReducers} from 'redux';
 
 const rootReducer = combineReducers({
   masterKegList: masterKegListReducer,
-  formVisibleOnPage: formVisibleReducer,
+  formVisible: formVisibleReducer,
   editing: editingReducer,
   selectedKeg: selectedKegReducer
 });

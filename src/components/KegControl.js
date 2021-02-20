@@ -8,7 +8,7 @@ import { connect } from 'react-redux';
 
 class KegControl extends React.Component {
 
-  handleAddingKeg = (newKeg) => { //done
+  handleAddingKeg = (newKeg) => {
     const { dispatch } = this.props;
     const { name, brand, price, abv, id, pintsLeft } = newKeg;
     const action = {
@@ -27,25 +27,25 @@ class KegControl extends React.Component {
     dispatch(action2);
   }
 
-  handleSelectingKeg = (id) => { //done
+  handleSelectingKeg = (id) => {
     const { dispatch } = this.props;
-    const thisKeg = this.props.masterKegList.filter(keg => keg.id === id)[0];
-    let action = {
+    const thisKeg = Object.values(this.props.masterKegList).filter(keg => keg.id === id)[0];
+    const action = {
       type: 'SELECT_KEG',
       selectedKeg: thisKeg
     }
     dispatch(action);
   }
 
-  handleEditClick = () => { //done
+  handleEditClick = () => {
     const { dispatch } = this.props;
-    let action = {
+    const action = {
       type: 'TOGGLE_EDIT',
     }
     dispatch(action);
   }
 
-  handleEditingKeg = (kegToEdit) => { //done
+  handleEditingKeg = (kegToEdit) => {
     const { dispatch } = this.props;
     const { name, brand, price, abv, id, pintsLeft } = kegToEdit;
     const action = {
@@ -69,7 +69,7 @@ class KegControl extends React.Component {
     dispatch(action3);
   }
 
-  handleSellingPint = () => { //done
+  handleSellingPint = () => {
     const { dispatch } = this.props;
     const thisKeg = this.props.selectedKeg;
     const updatedKeg = {...thisKeg, pintsLeft: thisKeg.pintsLeft - 1}
@@ -90,14 +90,14 @@ class KegControl extends React.Component {
     dispatch(action2);
   }
 
-  handleDeletingKeg = (id) => { //done
+  handleDeletingKeg = (id) => {
     const { dispatch } = this.props;
     const action = {
       type: 'DELETE_KEG',
       id
     }
     dispatch(action);
-    let action2 = {
+    const action2 = {
       type: 'SELECT_KEG',
       selectedKeg: null
     }
@@ -121,7 +121,6 @@ class KegControl extends React.Component {
       }
       dispatch(action3);
     } else {
-      console.log("clicked add")
       const action = {
         type: 'TOGGLE_FORM',
       }
