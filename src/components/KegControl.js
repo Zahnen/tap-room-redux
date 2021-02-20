@@ -3,6 +3,7 @@ import KegDetail from "./KegDetail";
 import KegList from "./KegList";
 import NewKegForm from "./NewKegForm";
 import EditKegForm from "./EditKegForm";
+import * as a from './../actions';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
@@ -10,62 +11,32 @@ class KegControl extends React.Component {
 
   handleAddingKeg = (newKeg) => {
     const { dispatch } = this.props;
-    const { name, brand, price, abv, id, pintsLeft } = newKeg;
-    const action = {
-      type: 'ADD_KEG',
-      name,
-      brand,
-      price,
-      abv,
-      id,
-      pintsLeft
-    }
+    const action = a.addKeg(newKeg);
     dispatch(action);
-    const action2 = {
-      type: 'TOGGLE_FORM'
-    }
+    const action2 = a.toggleForm();
     dispatch(action2);
   }
 
   handleSelectingKeg = (id) => {
     const { dispatch } = this.props;
     const thisKeg = Object.values(this.props.masterKegList).filter(keg => keg.id === id)[0];
-    const action = {
-      type: 'SELECT_KEG',
-      selectedKeg: thisKeg
-    }
+    const action = a.selectKeg(thisKeg);
     dispatch(action);
   }
 
   handleEditClick = () => {
     const { dispatch } = this.props;
-    const action = {
-      type: 'TOGGLE_EDIT',
-    }
+    const action = a.toggleEdit();
     dispatch(action);
   }
 
   handleEditingKeg = (kegToEdit) => {
     const { dispatch } = this.props;
-    const { name, brand, price, abv, id, pintsLeft } = kegToEdit;
-    const action = {
-      type: 'ADD_KEG',
-      name,
-      brand,
-      price,
-      abv,
-      id,
-      pintsLeft
-    }
+    const action = a.addKeg(kegToEdit);
     dispatch(action);
-    const action2 = {
-      type: 'TOGGLE_EDIT',
-    }
+    const action2 = a.toggleEdit();
     dispatch(action2);
-    const action3 = {
-      type: 'SELECT_KEG',
-      selectedKeg: kegToEdit
-    }
+    const action3 = a.selectKeg(kegToEdit);
     dispatch(action3);
   }
 
@@ -73,57 +44,35 @@ class KegControl extends React.Component {
     const { dispatch } = this.props;
     const thisKeg = this.props.selectedKeg;
     const updatedKeg = {...thisKeg, pintsLeft: thisKeg.pintsLeft - 1}
-    const action = {
-      type: 'ADD_KEG',
-      name: updatedKeg.name,
-      brand: updatedKeg.brand,
-      price: updatedKeg.price,
-      abv: updatedKeg.abv,
-      id: updatedKeg.id,
-      pintsLeft: updatedKeg.pintsLeft
-    }
+    const action = a.addKeg(updatedKeg);
     dispatch(action);
-    const action2 = {
-      type: 'SELECT_KEG',
-      selectedKeg: updatedKeg
-    }
+    const action2 = a.selectKeg(updatedKeg);
     dispatch(action2);
   }
 
   handleDeletingKeg = (id) => {
     const { dispatch } = this.props;
-    const action = {
-      type: 'DELETE_KEG',
-      id
-    }
+    const action = a.deleteKeg(id);
     dispatch(action);
-    const action2 = {
-      type: 'SELECT_KEG',
-      selectedKeg: null
-    }
+    const action2 = a.selectKeg(null);
     dispatch(action2);
   }
 
   handleClick = () => {
     const { dispatch } = this.props;
     if (this.props.selectedKeg != null) {
-      const action = {
-        type: 'TOGGLE_EDIT',
+      if(this.props.editing){
+        const action = a.toggleEdit();
+        dispatch(action);
       }
-      dispatch(action);
-      const action2 = {
-        type: 'SELECT_KEG',
-        selectedKeg: null
-      }
+      const action2 = a.selectKeg(null);
       dispatch(action2);
-      const action3 = {
-        type: 'TOGGLE_EDIT',
-      }
+      if(this.props.formVisible){
+      const action3 = a.toggleForm();
       dispatch(action3);
-    } else {
-      const action = {
-        type: 'TOGGLE_FORM',
       }
+    } else {
+      const action = a.toggleForm();
       dispatch(action);
     }
   }
