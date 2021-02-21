@@ -1,4 +1,5 @@
 import selectedKegReducer from '../../reducers/selected-keg-reducer';
+import * as c from '../../actions/ActionTypes';
 
 describe ('selectedKegReducer', () => {
 
@@ -16,7 +17,7 @@ describe ('selectedKegReducer', () => {
       pintsLeft: 9
       }
     let action = {
-      type: 'SELECT_KEG',
+      type: c.SELECT_KEG,
       selectedKeg: selectedTestKeg
     }
     expect(selectedKegReducer(null, action)).toEqual(selectedTestKeg);

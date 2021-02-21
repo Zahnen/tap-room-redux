@@ -4,6 +4,7 @@ import editingReducer from '../../reducers/editing-reducer';
 import selectedKegReducer from '../../reducers/selected-keg-reducer';
 import rootReducer from '../../reducers/index';
 import { createStore } from 'redux';
+import * as c from '../../actions/ActionTypes';
 
 let store = createStore(rootReducer);
 
@@ -36,7 +37,7 @@ describe ('rootReducer', () => {
 
   test('Check that ADD_KEG action functions for both masterKegListReducer and root reducer', () => {
     let action = {
-      type: 'ADD_KEG',
+      type: c.ADD_KEG,
       name: 'Beer',
       brand:'Brewer',
       price: '$4.00',
@@ -50,7 +51,7 @@ describe ('rootReducer', () => {
 
   test('Check that TOGGLE_FORM action functions for both formVisibleReducer and root reducer', () => {
     let action = {
-      type: 'TOGGLE_FORM'
+      type: c.TOGGLE_FORM
     }
     store.dispatch(action);
     expect(store.getState().formVisible).toEqual(formVisibleReducer(undefined, action));
@@ -58,7 +59,7 @@ describe ('rootReducer', () => {
 
   test('Check that TOGGLE_EDIT action functions for both editingReducer and root reducer', () => {
     let action = {
-      type: 'TOGGLE_EDIT'
+      type: c.TOGGLE_EDIT
     }
     store.dispatch(action);
     expect(store.getState().editing).toEqual(editingReducer(undefined, action));
@@ -75,7 +76,7 @@ describe ('rootReducer', () => {
       pintsLeft: 9
       }
     let action = {
-      type: 'SELECT_KEG',
+      type: c.SELECT_KEG,
       selectedKeg: selectedTestKeg
     }
     store.dispatch(action);

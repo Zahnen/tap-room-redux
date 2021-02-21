@@ -1,5 +1,4 @@
-import * as c from './ActionTypes'
-
+import * as c from './ActionTypes';
 
 export const addKeg = (keg) => {
   const { name, brand, price, abv, id, pintsLeft } = keg;

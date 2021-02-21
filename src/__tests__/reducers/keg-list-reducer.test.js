@@ -1,4 +1,5 @@
 import kegListReducer from '../../reducers/keg-list-reducer';
+import * as c from '../../actions/ActionTypes';
 
 describe('kegListReducer', () => {
 
@@ -37,7 +38,7 @@ describe('kegListReducer', () => {
   test('Should add a new keg to masterKegList', () => {
     const { name, brand, price, abv, id, pintsLeft } = kegData;
     action = {
-      type: 'ADD_KEG',
+      type: c.ADD_KEG,
       name,
       brand,
       price,
@@ -60,7 +61,7 @@ describe('kegListReducer', () => {
 
   test('Should delete a keg from a list of kegs', () => {
     action = {
-      type: 'DELETE_KEG',
+      type: c.DELETE_KEG,
       id: 1
     };
     expect(kegListReducer(currentState, action)).toEqual({
