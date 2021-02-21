@@ -12,7 +12,7 @@ function EditKegForm (props) {
 
   return (
     <>
-    <ReusableForm handleKegFormSubmission={handleEditingKegFormSubmission} />
+    <ReusableForm handleKegFormSubmission={handleEditingKegFormSubmission} keg = {props.keg} />
     </>
   );
 }
