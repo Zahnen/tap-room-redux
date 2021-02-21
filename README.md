@@ -1,22 +1,22 @@
 # Hopper
-### An React application with Redux, February 12, 2021
+### A React application with Redux, February 19, 2021
 
 #### By [Zahnen Garner](https://www.github.com/zahnen)
 
 ---  
 
-_Hopper is a React-based inventory management tool. Hopper allows users to track stock of kegs of beer and adjust their inventory as needed in a single-page application. Hopper was created as an independent project while studying at Epicodus. The application was created to apply concepts I learned this week which include the fundementals of React, modifying shared & local state, and using PropTypes._  
+_Hopper is a React-based inventory management tool that uses Redux to manage state. Hopper allows users to track stock of kegs of beer and adjust their inventory as needed in a single-page application. Hopper was created as an independent project while studying at Epicodus and was refactored in this iteration to use Redux to manage the application's state. The application was refactored to apply concepts I learned this week which include using Redux, using action creators, and using action constants._  
 
 ---  
 
 ## 🔍 Deployment
 
-[Click Here to view a live deployment of this project](https://zahnen.github.io/tap-room)
+[Click Here to view a live deployment of this project](https://zahnen.github.io/tap-room-redux)
 
 ## 📘 User Stories
 
 <details>
-  <summary>Expand</summary>
+  <summary>Click to expand user stories.</summary>
   This project was created to answer to the following user stories:
   <table>
   <tr>
@@ -98,7 +98,7 @@ _Hopper is a React-based inventory management tool. Hopper allows users to track
 
 * _Open your git-capable command line program (I recommend Terminal on Mac or Git Bash on PC)_
 * _Ensure you are within the directory you'd like the file to be created in._
-* _Enter the command `git clone https://github.com/Zahnen/tap-room` in your command line_
+* _Enter the command `git clone https://github.com/Zahnen/tap-room-redux` in your command line_
 * _Once cloned, use the `cd ` command to navigate to the directory created in the previous step._
 * _You must have node.js installed in order to run the webpage successfully. If you do not have node.js installed, find more information and download it [here](https://nodejs.org/en/download/)_
 * _Once in the newly cloned directory, run `npm install` in your command line to install the necessary packages and dependencies._
@@ -110,6 +110,17 @@ _Hopper is a React-based inventory management tool. Hopper allows users to track
 ## 📊 Component Diagram
 
 ![Component diagram](https://i.imgur.com/Gw5PkVq.jpg)
+
+---  
+
+## 📐 Testing/Test Specs
+
+To review all specs tested in Jest, navigate to the `__tests__` directory to view all 6 testing suites.
+
+### If you would like to run the tests locally
+* _Clone the repository and run the install command per the instructions in "Setup/Installation Instructions" if you have not already done so_
+* _Once cloned, use the `cd ` command to navigate to the tests directory titled `__tests__`._
+* _Run the command `npm test` in your command line._
 
 ---  
 
@@ -135,6 +146,8 @@ _This application required use of the following programs/languages/libraries to 
 - _[JSX](https://reactjs.org/docs/introducing-jsx.html)_
 - _[npm](https://www.npmjs.com/)_
 - _[Node.Js](https://nodejs.org/en/)_
+- _[Jest](https://jestjs.io/)_
+- _[Redux](https://redux.js.org/)_
 - _[Babel](https://babeljs.io/)_
 - _[ES Lint](https://eslint.org/)_
 - _[Bootstrap](https://getbootstrap.com/)_
